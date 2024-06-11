@@ -3,8 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rock-Paper-Scissor</title>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <div class="container">
+        <h1 class="title">Rock Paper Scissors</h1>
+
+        <div class="scores">
+          <div class="player-score">
+            <div>Player</div>
+            <div class="health-bar">
+              <div id="playerHealth" class="health-fill"></div>
+            </div>
+            <div id="playerDisplay">Player Score: 0</div>
+          </div>
+          <div class="timer" id="timerDisplay">Times left 30 seconds</div>
+          <div class="computer-score">
+            <div>Computer</div>
+            <div class="health-bar">
+              <div id="computerHealth" class="health-fill"></div>
+            </div>
+            <div id="computerDisplay">Computer Score: 0</div>
+          </div>
+        </div>
+        <div class="round"><h2 id="roundDisplay">Round: 0</h2></div>
+        <p id="resultDisplay">First to 5 wins!</p>
+        <div class="player-choice">
+          <img
+            src="images/rock.png"
+            alt="rock"
+            id="rockBtn"
+            class="choice-image rock"
+          />
+          <img
+            src="images/paper.png"
+            alt="paper"
+            id="paperBtn"
+            class="choice-image paper"
+          />
+          <img
+            src="images/scissor.png"
+            alt="scissor"
+            id="scissorBtn"
+            class="choice-image scissor"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.title {
+  font-size: 100px;
+  border: 5px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#scissorBtn,
+#paperBtn {
+  width: 150px;
+  height: 150px;
+}
+#rockBtn {
+  width: 140px;
+  height: 140px;
+  position: relative;
+}
+
+.round {
+  margin-top: 30px;
+}
+
+#resultDisplay {
+  margin-top: 50px;
+}
+.container {
+  margin-top: 10px;
+}
+
+#roundDisplay,
+#playerDisplay,
+#computerDisplay,
+#resultDisplay {
+  margin-top: 20px;
+}
+
+.choice-image {
+  cursor: pointer;
+  margin: 0 10px;
+
+  transition: transform 0.3s ease;
+}
+
+.choice-image:hover {
+  transform: scale(1.1);
+}
+
+@keyframes rockAttack {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-50px) translateX(50px);
+  } /* Adjust as needed */
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.rock.move,
+.paper.move,
+.scissor.move {
+  animation: rockAttack 0.6s ease;
+}
+
+.scores {
+  display: flex;
+  gap: 250px;
+  margin: 20px;
+  justify-content: center;
+}
+
+.player-choice {
+  display: flex;
+  margin-top: 100px;
+  gap: 50px;
+  justify-content: center;
+}
+
+.player-score {
+  margin-left: 50px;
+  padding: 10px;
+}
+
+.computer-score {
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.health-bar {
+  background-color: #e0e0e0;
+  border: 2px solid #000;
+  border-radius: 10px;
+  height: 20px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.health-fill {
+  background-color: #080808;
+  height: 100%;
+  width: 100%; /* Initial full health */
+  border-radius: 8px;
+}
