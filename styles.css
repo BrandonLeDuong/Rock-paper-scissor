@@ -19,6 +19,7 @@ body {
   width: 150px;
   height: 150px;
 }
+
 #rockBtn {
   width: 140px;
   height: 140px;
@@ -30,10 +31,11 @@ body {
 }
 
 #resultDisplay {
-  margin-top: 50px;
+  margin-top: 70px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
 .container {
   margin-top: 10px;
 }
@@ -54,17 +56,13 @@ body {
   transform: scale(1.1);
 }
 
-.icon {
-  font-size: 30px;
-}
-
 @keyframes rockAttack {
   0% {
     transform: translateY(0) translateX(0);
   }
   50% {
     transform: translateY(-50px) translateX(50px);
-  } /* Adjust as needed */
+  }
   100% {
     transform: translateY(0) translateX(0);
   }
@@ -79,9 +77,9 @@ body {
 .timer {
   color: red;
   font-weight: bolder;
-  font-size: 50px;
+  font-size: 55px;
   margin: 2px;
-  width: 70px; /* Fixed width for the timer */
+  width: 70px;
   display: inline-block;
 }
 
@@ -124,19 +122,19 @@ body {
 .health-fill {
   background-color: #080808;
   height: 100%;
-  width: 0%; /* Initial full health */
+  width: 0%;
   border-radius: 8px;
 }
 
 #resultDisplay {
-  margin-top: 70px;
+  margin-top: 50px;
   font-size: 15px;
   font-weight: bold;
   padding: 20px;
   border: 3px solid #0b0b0b;
-  border-radius: 20px; /* Increased border radius */
-  background-color: #eaeaea; /* Slightly darker background color */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle box-shadow */
+  border-radius: 20px;
+  background-color: #eaeaea;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: scaleResult 0.3s ease-in-out;
   color: rgb(2, 2, 2);
   width: 40%;
@@ -161,15 +159,16 @@ body {
   background-color: #131413;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 12px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
-  margin: 10px 0;
+  font-size: 14px;
   border-radius: 12px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+  margin-bottom: 20px;
 }
 
 .reset-button:hover {
