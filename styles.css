@@ -25,12 +25,14 @@ body {
   position: relative;
 }
 
-.round {
-  margin-top: 30px;
+#roundDisplay {
+  font-size: 30px;
 }
 
 #resultDisplay {
   margin-top: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .container {
   margin-top: 10px;
@@ -38,20 +40,22 @@ body {
 
 #roundDisplay,
 #playerDisplay,
-#computerDisplay,
-#resultDisplay {
+#computerDisplay {
   margin-top: 20px;
 }
 
 .choice-image {
   cursor: pointer;
   margin: 0 10px;
-
   transition: transform 0.3s ease;
 }
 
 .choice-image:hover {
   transform: scale(1.1);
+}
+
+.icon {
+  font-size: 30px;
 }
 
 @keyframes rockAttack {
@@ -72,27 +76,37 @@ body {
   animation: rockAttack 0.6s ease;
 }
 
+.timer {
+  color: red;
+  font-weight: bolder;
+  font-size: 50px;
+  margin: 2px;
+  width: 70px; /* Fixed width for the timer */
+  display: inline-block;
+}
+
+.time-description {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
 .scores {
   display: flex;
-  gap: 250px;
+  gap: 150px;
   margin: 20px;
   justify-content: center;
 }
 
 .player-choice {
   display: flex;
-  margin-top: 100px;
+  margin-top: 50px;
   gap: 50px;
   justify-content: center;
 }
 
-.player-score {
-  margin-left: 50px;
-  padding: 10px;
-}
-
+.player-score,
 .computer-score {
-  margin-right: 50px;
   padding: 10px;
 }
 
@@ -110,6 +124,60 @@ body {
 .health-fill {
   background-color: #080808;
   height: 100%;
-  width: 100%; /* Initial full health */
+  width: 0%; /* Initial full health */
   border-radius: 8px;
+}
+
+#resultDisplay {
+  margin-top: 70px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px;
+  border: 3px solid #0b0b0b;
+  border-radius: 20px; /* Increased border radius */
+  background-color: #eaeaea; /* Slightly darker background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle box-shadow */
+  animation: scaleResult 0.3s ease-in-out;
+  color: rgb(2, 2, 2);
+  width: 40%;
+}
+
+.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes scaleResult {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.reset-button {
+  background-color: #131413;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #82858270;
+  transform: scale(1.05);
+}
+
+.reset-button:active {
+  background-color: #070707;
+  transform: scale(1);
 }
